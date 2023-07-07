@@ -1,0 +1,14 @@
+@startuml
+Collector -> Aim
+Aim --> Collector: aims[]
+Collector -> Dispatcher: getRightTanks(aims[])
+Dispatcher -> TankSearcher: findRight(aims[])
+TankSearcher -> Tank
+Tank --> TankSearcher: tanks[]
+TankSearcher --> Dispatcher: rightTanks[]
+Dispatcher -> Sorter: sortBySpeed(rightTanks[])
+Sorter --> Dispatcher: sortedRightTanks[]
+Dispatcher -> MessageCreator: create(sortedRightTanks[]) 
+MessageCreator --> Dispatcher: message(string)
+Dispatcher --> Collector: message(string)
+@enduml https://plantuml.github.io/plantuml-core/raw.html?TP6x3iCW34Ltle8HXln0XqejNRiatQ8EA749Qbx2NlhtvQ6a8L47XCKzrxuoQkfxQ6Xol3ZpYnsOFxpmjLg44zTsmFh9r1QzMPmrDHrutG2LrdJqqECRHQ8b-n613re5sYN7ouvjjApqLb_u-1Z3v6uAStoWtBCBvTP4diopL9EZWA2_hvzg1cZ55fSi4OUUmG1j-R_p7H2r0UL0nyqreG1nz4dESlOmQqYoG79sDFawy-_PaLy0
