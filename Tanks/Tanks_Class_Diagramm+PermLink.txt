@@ -15,8 +15,10 @@ class MessageCreator{
 +create()
 }
 
-class Tanks {
-cranes[]
+class Tank {
++getName()
++getMaxSpeed()
++getArmorPiercing()
 }
 
 class TankSearcher {
@@ -31,11 +33,11 @@ class Sorter {
 Collector --> Aim
 Collector --> Dispatcher: aims[]
 Dispatcher --> TankSearcher: aims[]
-TankSearcher --> Tanks
+TankSearcher --> Tank
 TankSearcher --> Dispatcher: rightTanks[]
 Dispatcher --> Sorter: rightTanks[]
 Sorter --> Dispatcher: sortedRightTanks[]
 Dispatcher --> MessageCreator: sortedRightTanks[],aim
 MessageCreator --> Dispatcher: message(string)
 Dispatcher --> Collector: message(string)
-@enduml permlink: https://plantuml.github.io/plantuml-core/raw.html?VP2x3eCm34NtV4N68ieFTAX4wTe5sAeEKN0XuX7aPAcg_dkJy0fGTRFiutjzpHkc54raqm3N4WdXhX6Bbhv9M8AEiPMOLuBN7IXr2CXdOgv2zKpp2j2WZar5MUcSTRNb5l1c5ba92G8p5aQMsmfyBRTaP3WoOtD_h2SPC1nzmgVe2kVZhsSIzJ1MfhgyiXwW600oPwDHTBR1DfqbneaoqLfpBvab_1DcPdNNHAbzsvV7-Jzxao72XXbpRNLiI2ZIFshhb__QE9eSP8tjVDfXV50QHLS6MvFvZplo2m00
+@enduml https://plantuml.github.io/plantuml-core/raw.html?VP7F3e8m3CRlUmgE6lK5F9WeNZ46k1aFpQYmo81qEsYCx-x6FySmthhsrw_zEbw2Ka5OboLoNHDZl4tiXGnUR9MZtfEiAIq4lrUer6B9tWDp5Ae1pGiaWxPiBF92fr3TBVS58zC8EOQ4O4OOMMuZTBLiKp_m1DAMR1Z18saGi_xPhd8MI5nKkT-T852_o-ecggpTnOMIcdHNLYOwF0Tb0x3HVx3PxAnvB_ErkWr0I7MvCiUz9TmLHcQorq3DiwuwZIUSp-WSU4nlozUn7Z6B_wXDV-LNnzhOO5DiDaTsvONIP3vbwGyPppWZFm00
